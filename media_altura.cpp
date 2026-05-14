@@ -6,7 +6,7 @@ int main() {
     float peso;
     float soma_alturas = 0.0;
     float media_alturas;
-    int contador_peso_baixo = 0;
+    int contador_peso_baixo = 0, porcentagem;
 
     for (int i = 1; i <= 5; i++) {
         printf("--- Pessoa %d ---\n", i);
@@ -37,10 +37,11 @@ int main() {
     }
 
     media_alturas = soma_alturas / 10.0;
+    porcentagem = (contador_peso_baixo * 100) / 5;
 
     printf("================ RESULTADOS ================\n");
     printf("A media das alturas e: %.2f metros\n", media_alturas);
-    printf("Quantidade de pessoas com menos de 40 kg: %d\n", contador_peso_baixo);
+    printf("Porcentagem de pessoas com menos de 40 kg: %.1d%s\n", porcentagem, "%");
 
     return 0;
 }
